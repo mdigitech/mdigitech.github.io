@@ -4,51 +4,67 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title> MDIGITECH </title>
+		<link rel="icon" href="static/images/logo.png" type="image/x-icon">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="static/styles/bootstrap.css">
 		<link href="static/styles/body.css" rel="stylesheet">
+		<link href="static/styles/button.css" rel="stylesheet">
 	</head>
 	<body>
 		<section id="watermark">
 			<nav>
-				<ul>
-					<li class="logo">
-					</li>
+				<ul class="fix">
+					<img src="static/images/logo.png">
 				</ul>
 				<ul class="menu">
 					<li><a href="#">HOME</a></li>
 					<li><a href="#">BLOG</a></li>
 					<li><a href="#">PRODUCTS</a></li>
-					<li><a href="#">ABOUT US</a></li>
+					<li><a href="#next">ABOUT US</a></li>
 				</ul>
 			</nav>
 			<video id="#video-bg" src="static/images/tech.mp4" muted autoplay loop></video>
 			<div class="overlay"></div>
 			<div class="watermark-text">
-				<h2>Let's go for a walk...</h2>
-				<h1>...On the Moon</h1>
-				<p>
-				This demo shows a video background with no overlay.
-				</p>
-				<a href="#" class="btn">Let's go!</a>
+				<h1 class="logo"></h1>
+				<p class="text"></p>
+				<div class="buttons">
+					<a class="blob-btn" href="#next">
+					  Let's Go!
+					  <span class="blob-btn__inner">
+						<span class="blob-btn__blobs">
+						  <span class="blob-btn__blob"></span>
+						  <span class="blob-btn__blob"></span>
+						  <span class="blob-btn__blob"></span>
+						  <span class="blob-btn__blob"></span>
+						</span>
+					  </span>
+					</a>
+					<br/>
+				  
+				  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<defs>
+					  <filter id="goo">
+						<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+						<feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+					  </filter>
+					</defs>
+				  </svg>
+				</div>
 			</div>
 		</section>
 
 		<section id="next">
 			<div class="container">
-			  <h2>Next Section</h2>
-			  <h3>
-				The gradient blends in with the background color of this section
-			  </h3>
+			  <h2>MISSION</h2>
 			  <p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel suscipit
-				iste ducimus minus qui error debitis exercitationem laboriosam dicta
-				facilis!
+				At MDigiTech, our mission is to empower businesses of all sizes to succeed in the digital age. We believe that technology can level the playing field and give small businesses the tools they need to compete with larger ones. We strive to make digital tools and services accessible and affordable to all, regardless of their technical expertise or budget. Whether it's through our software solutions, training programs, or consulting services, we're dedicated to helping our clients navigate the ever-changing digital landscape and achieve their goals. Our ultimate goal is to create a world where technology is an enabler, not a barrier, to business success.
 			  </p>
 			</div>
 		  </section>
-		  <script type="text/javascript" src="static/js/type.js"></script>
 		  <script type="text/javascript" src="static/js/main.js"></script>
+		  <script type="text/javascript" src="static/js/type.js"></script>
 		</body>
 	</body>
 </html>

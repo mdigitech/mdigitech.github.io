@@ -1,46 +1,27 @@
-var words = ['HELLO THERE!', 'WELCOME TO MDIGITECH!', 'ADAPTING TO TECHNOLOGY EVOLUTION'],
-  part,
-  i = 0,
-  offset = 0,
-  len = words.length,
-  forwards = true,
-  skip_count = 0,
-  skip_delay = 15,
-  speed = 70;
-var wordflick = function () {
-setInterval(function () {
-  if (forwards) {
-    if (offset >= words[i].length) {
-      ++skip_count;
-      if (skip_count == skip_delay) {
-        forwards = false;
-        skip_count = 0;
-      }
-    }
-  }
-  else {
-    if (offset == 0) {
-      forwards = true;
-      i++;
-      offset = 0;
-      if (i >= len) {
-        i = 0;
-      }
-    }
-  }
-  part = words[i].substr(0, offset);
-  if (skip_count == 0) {
-    if (forwards) {
-      offset++;
-    }
-    else {
-      offset--;
-    }
-  }
-  $('.logo').text(part);
-},speed);
-};
+var i = 0;
+var txt = 'WELCOME TO MDIGITECH!'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
 
-$(document).ready(function () {
-wordflick();
-});
+function typeWriter() {
+  if (i < txt.length) {
+    document.querySelector(".logo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+typeWriter()
+
+var y = 0;
+var txt2 = 'Join Our Community Of Visionaries and Game-Changers'; /* The text */
+var speed2 = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter2() {
+  if (y < txt2.length) {
+    document.querySelector(".text").innerHTML += txt2.charAt(y);
+    y++;
+    setTimeout(typeWriter2, speed2);
+  }
+}
+
+typeWriter2()
