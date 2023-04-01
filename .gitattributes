@@ -1,0 +1,4 @@
+*.yml lockable
+static/images/*.mp4 lockable
+static/images/*.jpg lockable
+static/images/*.jpeg lockable
