@@ -15,3 +15,4 @@ let options = {
   }
   let observer = new IntersectionObserver(callback, options);
   observer.observe(document.querySelector('#video-bg'));
+
